@@ -51,6 +51,7 @@ namespace LibrarySystem.Controllers
 
             var created = _loanRepository.CreateLoan(loan);
 
+
             if (!created)
             {
                 // Puede que no exista el libro o no haya copias disponibles

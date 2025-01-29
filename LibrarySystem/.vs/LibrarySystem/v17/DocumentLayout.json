@@ -1,0 +1,313 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\PruebaTecnica\\LibrarySystem\\LibrarySystem\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{D00783E3-B7D7-4E3D-BEA0-7AE849447BFC}|LibrarySystem\\LibrarySystem.csproj|d:\\pruebatecnica\\librarysystem\\librarysystem\\librarysystem\\repository\\loanrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D00783E3-B7D7-4E3D-BEA0-7AE849447BFC}|LibrarySystem\\LibrarySystem.csproj|solutionrelative:librarysystem\\repository\\loanrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D00783E3-B7D7-4E3D-BEA0-7AE849447BFC}|LibrarySystem\\LibrarySystem.csproj|d:\\pruebatecnica\\librarysystem\\librarysystem\\librarysystem\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D00783E3-B7D7-4E3D-BEA0-7AE849447BFC}|LibrarySystem\\LibrarySystem.csproj|solutionrelative:librarysystem\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D00783E3-B7D7-4E3D-BEA0-7AE849447BFC}|LibrarySystem\\LibrarySystem.csproj|d:\\pruebatecnica\\librarysystem\\librarysystem\\librarysystem\\controllers\\reportscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D00783E3-B7D7-4E3D-BEA0-7AE849447BFC}|LibrarySystem\\LibrarySystem.csproj|solutionrelative:librarysystem\\controllers\\reportscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D00783E3-B7D7-4E3D-BEA0-7AE849447BFC}|LibrarySystem\\LibrarySystem.csproj|d:\\pruebatecnica\\librarysystem\\librarysystem\\librarysystem\\repository\\reportrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D00783E3-B7D7-4E3D-BEA0-7AE849447BFC}|LibrarySystem\\LibrarySystem.csproj|solutionrelative:librarysystem\\repository\\reportrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D00783E3-B7D7-4E3D-BEA0-7AE849447BFC}|LibrarySystem\\LibrarySystem.csproj|d:\\pruebatecnica\\librarysystem\\librarysystem\\librarysystem\\repository\\irepository\\ireportrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D00783E3-B7D7-4E3D-BEA0-7AE849447BFC}|LibrarySystem\\LibrarySystem.csproj|solutionrelative:librarysystem\\repository\\irepository\\ireportrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D00783E3-B7D7-4E3D-BEA0-7AE849447BFC}|LibrarySystem\\LibrarySystem.csproj|d:\\pruebatecnica\\librarysystem\\librarysystem\\librarysystem\\controllers\\loancontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D00783E3-B7D7-4E3D-BEA0-7AE849447BFC}|LibrarySystem\\LibrarySystem.csproj|solutionrelative:librarysystem\\controllers\\loancontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D00783E3-B7D7-4E3D-BEA0-7AE849447BFC}|LibrarySystem\\LibrarySystem.csproj|d:\\pruebatecnica\\librarysystem\\librarysystem\\librarysystem\\repository\\bookrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D00783E3-B7D7-4E3D-BEA0-7AE849447BFC}|LibrarySystem\\LibrarySystem.csproj|solutionrelative:librarysystem\\repository\\bookrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D00783E3-B7D7-4E3D-BEA0-7AE849447BFC}|LibrarySystem\\LibrarySystem.csproj|d:\\pruebatecnica\\librarysystem\\librarysystem\\librarysystem\\controllers\\bookcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D00783E3-B7D7-4E3D-BEA0-7AE849447BFC}|LibrarySystem\\LibrarySystem.csproj|solutionrelative:librarysystem\\controllers\\bookcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D00783E3-B7D7-4E3D-BEA0-7AE849447BFC}|LibrarySystem\\LibrarySystem.csproj|d:\\pruebatecnica\\librarysystem\\librarysystem\\librarysystem\\model\\dto\\book\\getbookdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D00783E3-B7D7-4E3D-BEA0-7AE849447BFC}|LibrarySystem\\LibrarySystem.csproj|solutionrelative:librarysystem\\model\\dto\\book\\getbookdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D00783E3-B7D7-4E3D-BEA0-7AE849447BFC}|LibrarySystem\\LibrarySystem.csproj|d:\\pruebatecnica\\librarysystem\\librarysystem\\librarysystem\\model\\dto\\book\\bookdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D00783E3-B7D7-4E3D-BEA0-7AE849447BFC}|LibrarySystem\\LibrarySystem.csproj|solutionrelative:librarysystem\\model\\dto\\book\\bookdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D00783E3-B7D7-4E3D-BEA0-7AE849447BFC}|LibrarySystem\\LibrarySystem.csproj|d:\\pruebatecnica\\librarysystem\\librarysystem\\librarysystem\\controllers\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D00783E3-B7D7-4E3D-BEA0-7AE849447BFC}|LibrarySystem\\LibrarySystem.csproj|solutionrelative:librarysystem\\controllers\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D00783E3-B7D7-4E3D-BEA0-7AE849447BFC}|LibrarySystem\\LibrarySystem.csproj|d:\\pruebatecnica\\librarysystem\\librarysystem\\librarysystem\\model\\dto\\user\\updateuserdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D00783E3-B7D7-4E3D-BEA0-7AE849447BFC}|LibrarySystem\\LibrarySystem.csproj|solutionrelative:librarysystem\\model\\dto\\user\\updateuserdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D00783E3-B7D7-4E3D-BEA0-7AE849447BFC}|LibrarySystem\\LibrarySystem.csproj|d:\\pruebatecnica\\librarysystem\\librarysystem\\librarysystem\\repository\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D00783E3-B7D7-4E3D-BEA0-7AE849447BFC}|LibrarySystem\\LibrarySystem.csproj|solutionrelative:librarysystem\\repository\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D00783E3-B7D7-4E3D-BEA0-7AE849447BFC}|LibrarySystem\\LibrarySystem.csproj|d:\\pruebatecnica\\librarysystem\\librarysystem\\librarysystem\\repository\\irepository\\iuserrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D00783E3-B7D7-4E3D-BEA0-7AE849447BFC}|LibrarySystem\\LibrarySystem.csproj|solutionrelative:librarysystem\\repository\\irepository\\iuserrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D00783E3-B7D7-4E3D-BEA0-7AE849447BFC}|LibrarySystem\\LibrarySystem.csproj|d:\\pruebatecnica\\librarysystem\\librarysystem\\librarysystem\\repository\\irepository\\iauthrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D00783E3-B7D7-4E3D-BEA0-7AE849447BFC}|LibrarySystem\\LibrarySystem.csproj|solutionrelative:librarysystem\\repository\\irepository\\iauthrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D00783E3-B7D7-4E3D-BEA0-7AE849447BFC}|LibrarySystem\\LibrarySystem.csproj|d:\\pruebatecnica\\librarysystem\\librarysystem\\librarysystem\\repository\\authrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D00783E3-B7D7-4E3D-BEA0-7AE849447BFC}|LibrarySystem\\LibrarySystem.csproj|solutionrelative:librarysystem\\repository\\authrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D00783E3-B7D7-4E3D-BEA0-7AE849447BFC}|LibrarySystem\\LibrarySystem.csproj|d:\\pruebatecnica\\librarysystem\\librarysystem\\librarysystem\\auth\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D00783E3-B7D7-4E3D-BEA0-7AE849447BFC}|LibrarySystem\\LibrarySystem.csproj|solutionrelative:librarysystem\\auth\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 10,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "ReportRepository.cs",
+              "DocumentMoniker": "D:\\PruebaTecnica\\LibrarySystem\\LibrarySystem\\LibrarySystem\\Repository\\ReportRepository.cs",
+              "RelativeDocumentMoniker": "LibrarySystem\\Repository\\ReportRepository.cs",
+              "ToolTip": "D:\\PruebaTecnica\\LibrarySystem\\LibrarySystem\\LibrarySystem\\Repository\\ReportRepository.cs",
+              "RelativeToolTip": "LibrarySystem\\Repository\\ReportRepository.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAACEAAAAiAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-29T11:57:02.51Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "IReportRepository.cs",
+              "DocumentMoniker": "D:\\PruebaTecnica\\LibrarySystem\\LibrarySystem\\LibrarySystem\\Repository\\IRepository\\IReportRepository.cs",
+              "RelativeDocumentMoniker": "LibrarySystem\\Repository\\IRepository\\IReportRepository.cs",
+              "ToolTip": "D:\\PruebaTecnica\\LibrarySystem\\LibrarySystem\\LibrarySystem\\Repository\\IRepository\\IReportRepository.cs",
+              "RelativeToolTip": "LibrarySystem\\Repository\\IRepository\\IReportRepository.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABUAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-29T11:56:22.232Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "LoanController.cs",
+              "DocumentMoniker": "D:\\PruebaTecnica\\LibrarySystem\\LibrarySystem\\LibrarySystem\\Controllers\\LoanController.cs",
+              "RelativeDocumentMoniker": "LibrarySystem\\Controllers\\LoanController.cs",
+              "ToolTip": "D:\\PruebaTecnica\\LibrarySystem\\LibrarySystem\\LibrarySystem\\Controllers\\LoanController.cs",
+              "RelativeToolTip": "LibrarySystem\\Controllers\\LoanController.cs",
+              "ViewState": "AQIAABgAAAAAAAAAAAAowCwAAAA7AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-29T10:10:11.871Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "BookRepository.cs",
+              "DocumentMoniker": "D:\\PruebaTecnica\\LibrarySystem\\LibrarySystem\\LibrarySystem\\Repository\\BookRepository.cs",
+              "RelativeDocumentMoniker": "LibrarySystem\\Repository\\BookRepository.cs",
+              "ToolTip": "D:\\PruebaTecnica\\LibrarySystem\\LibrarySystem\\LibrarySystem\\Repository\\BookRepository.cs",
+              "RelativeToolTip": "LibrarySystem\\Repository\\BookRepository.cs",
+              "ViewState": "AQIAACIAAAAAAAAAAAAcwEAAAAAxAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-29T09:39:43.844Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "BookController.cs",
+              "DocumentMoniker": "D:\\PruebaTecnica\\LibrarySystem\\LibrarySystem\\LibrarySystem\\Controllers\\BookController.cs",
+              "RelativeDocumentMoniker": "LibrarySystem\\Controllers\\BookController.cs",
+              "ToolTip": "D:\\PruebaTecnica\\LibrarySystem\\LibrarySystem\\LibrarySystem\\Controllers\\BookController.cs",
+              "RelativeToolTip": "LibrarySystem\\Controllers\\BookController.cs",
+              "ViewState": "AQIAADIAAAAAAAAAAAAIwFIAAABHAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-29T09:39:18.74Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "BookDTO.cs",
+              "DocumentMoniker": "D:\\PruebaTecnica\\LibrarySystem\\LibrarySystem\\LibrarySystem\\Model\\DTO\\Book\\BookDTO.cs",
+              "RelativeDocumentMoniker": "LibrarySystem\\Model\\DTO\\Book\\BookDTO.cs",
+              "ToolTip": "D:\\PruebaTecnica\\LibrarySystem\\LibrarySystem\\LibrarySystem\\Model\\DTO\\Book\\BookDTO.cs",
+              "RelativeToolTip": "LibrarySystem\\Model\\DTO\\Book\\BookDTO.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAAAHAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-29T09:34:00.963Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "GetBookDTO.cs",
+              "DocumentMoniker": "D:\\PruebaTecnica\\LibrarySystem\\LibrarySystem\\LibrarySystem\\Model\\DTO\\Book\\GetBookDTO.cs",
+              "RelativeDocumentMoniker": "LibrarySystem\\Model\\DTO\\Book\\GetBookDTO.cs",
+              "ToolTip": "D:\\PruebaTecnica\\LibrarySystem\\LibrarySystem\\LibrarySystem\\Model\\DTO\\Book\\GetBookDTO.cs",
+              "RelativeToolTip": "LibrarySystem\\Model\\DTO\\Book\\GetBookDTO.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAsAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-29T09:33:59.082Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "UpdateUserDTO.cs",
+              "DocumentMoniker": "D:\\PruebaTecnica\\LibrarySystem\\LibrarySystem\\LibrarySystem\\Model\\DTO\\User\\UpdateUserDTO.cs",
+              "RelativeDocumentMoniker": "LibrarySystem\\Model\\DTO\\User\\UpdateUserDTO.cs",
+              "ToolTip": "D:\\PruebaTecnica\\LibrarySystem\\LibrarySystem\\LibrarySystem\\Model\\DTO\\User\\UpdateUserDTO.cs",
+              "RelativeToolTip": "LibrarySystem\\Model\\DTO\\User\\UpdateUserDTO.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAMAAAAFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-29T09:30:39.68Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\PruebaTecnica\\LibrarySystem\\LibrarySystem\\LibrarySystem\\Program.cs",
+              "RelativeDocumentMoniker": "LibrarySystem\\Program.cs",
+              "ToolTip": "D:\\PruebaTecnica\\LibrarySystem\\LibrarySystem\\LibrarySystem\\Program.cs",
+              "RelativeToolTip": "LibrarySystem\\Program.cs",
+              "ViewState": "AQIAACcAAAAAAAAAAAAwwC4AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-29T09:15:10.077Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "LoanRepository.cs",
+              "DocumentMoniker": "D:\\PruebaTecnica\\LibrarySystem\\LibrarySystem\\LibrarySystem\\Repository\\LoanRepository.cs",
+              "RelativeDocumentMoniker": "LibrarySystem\\Repository\\LoanRepository.cs",
+              "ToolTip": "D:\\PruebaTecnica\\LibrarySystem\\LibrarySystem\\LibrarySystem\\Repository\\LoanRepository.cs",
+              "RelativeToolTip": "LibrarySystem\\Repository\\LoanRepository.cs",
+              "ViewState": "AQIAAC8AAAAAAAAAAAAIwF4AAAANAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-29T10:03:41.956Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ReportsController.cs",
+              "DocumentMoniker": "D:\\PruebaTecnica\\LibrarySystem\\LibrarySystem\\LibrarySystem\\Controllers\\ReportsController.cs",
+              "RelativeDocumentMoniker": "LibrarySystem\\Controllers\\ReportsController.cs",
+              "ToolTip": "D:\\PruebaTecnica\\LibrarySystem\\LibrarySystem\\LibrarySystem\\Controllers\\ReportsController.cs",
+              "RelativeToolTip": "LibrarySystem\\Controllers\\ReportsController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAACsAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-29T11:57:52.155Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "UsersController.cs",
+              "DocumentMoniker": "D:\\PruebaTecnica\\LibrarySystem\\LibrarySystem\\LibrarySystem\\Controllers\\UsersController.cs",
+              "RelativeDocumentMoniker": "LibrarySystem\\Controllers\\UsersController.cs",
+              "ToolTip": "D:\\PruebaTecnica\\LibrarySystem\\LibrarySystem\\LibrarySystem\\Controllers\\UsersController.cs",
+              "RelativeToolTip": "LibrarySystem\\Controllers\\UsersController.cs",
+              "ViewState": "AQIAABkAAAAAAAAAAAAowEUAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-29T09:13:06.271Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "UserRepository.cs",
+              "DocumentMoniker": "D:\\PruebaTecnica\\LibrarySystem\\LibrarySystem\\LibrarySystem\\Repository\\UserRepository.cs",
+              "RelativeDocumentMoniker": "LibrarySystem\\Repository\\UserRepository.cs",
+              "ToolTip": "D:\\PruebaTecnica\\LibrarySystem\\LibrarySystem\\LibrarySystem\\Repository\\UserRepository.cs",
+              "RelativeToolTip": "LibrarySystem\\Repository\\UserRepository.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAACUAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-29T09:12:34.431Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "IUserRepository.cs",
+              "DocumentMoniker": "D:\\PruebaTecnica\\LibrarySystem\\LibrarySystem\\LibrarySystem\\Repository\\IRepository\\IUserRepository.cs",
+              "RelativeDocumentMoniker": "LibrarySystem\\Repository\\IRepository\\IUserRepository.cs",
+              "ToolTip": "D:\\PruebaTecnica\\LibrarySystem\\LibrarySystem\\LibrarySystem\\Repository\\IRepository\\IUserRepository.cs",
+              "RelativeToolTip": "LibrarySystem\\Repository\\IRepository\\IUserRepository.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAkAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-29T09:11:21.994Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "IAuthRepository.cs",
+              "DocumentMoniker": "D:\\PruebaTecnica\\LibrarySystem\\LibrarySystem\\LibrarySystem\\Repository\\IRepository\\IAuthRepository.cs",
+              "RelativeDocumentMoniker": "LibrarySystem\\Repository\\IRepository\\IAuthRepository.cs",
+              "ToolTip": "D:\\PruebaTecnica\\LibrarySystem\\LibrarySystem\\LibrarySystem\\Repository\\IRepository\\IAuthRepository.cs",
+              "RelativeToolTip": "LibrarySystem\\Repository\\IRepository\\IAuthRepository.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-29T09:05:20.574Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "AuthRepository.cs",
+              "DocumentMoniker": "D:\\PruebaTecnica\\LibrarySystem\\LibrarySystem\\LibrarySystem\\Repository\\AuthRepository.cs",
+              "RelativeDocumentMoniker": "LibrarySystem\\Repository\\AuthRepository.cs",
+              "ToolTip": "D:\\PruebaTecnica\\LibrarySystem\\LibrarySystem\\LibrarySystem\\Repository\\AuthRepository.cs",
+              "RelativeToolTip": "LibrarySystem\\Repository\\AuthRepository.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-29T09:05:05.095Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "AuthController.cs",
+              "DocumentMoniker": "D:\\PruebaTecnica\\LibrarySystem\\LibrarySystem\\LibrarySystem\\Auth\\AuthController.cs",
+              "RelativeDocumentMoniker": "LibrarySystem\\Auth\\AuthController.cs",
+              "ToolTip": "D:\\PruebaTecnica\\LibrarySystem\\LibrarySystem\\LibrarySystem\\Auth\\AuthController.cs",
+              "RelativeToolTip": "LibrarySystem\\Auth\\AuthController.cs",
+              "ViewState": "AQIAABkAAAAAAAAAAAAgwBEAAAA5AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-29T09:03:56.628Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

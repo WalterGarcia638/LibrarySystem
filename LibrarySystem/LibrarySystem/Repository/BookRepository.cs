@@ -62,7 +62,7 @@ namespace LibrarySystem.Repository
 
         public bool CreateBook(Book book)
         {
-            book.AvailableCopies = book.TotalCopies;
+            book.AvailableCopies = book.Quantity;
             _db.Book.Add(book);
             return Save();
         }

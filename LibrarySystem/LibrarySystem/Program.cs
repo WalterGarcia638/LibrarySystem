@@ -42,6 +42,9 @@ builder.Services.AddDbContext<ApplicationDbContext>(Options => Options.UseSqlSer
 builder.Services.AddScoped<IBookRepository, BookRepository>();
 builder.Services.AddScoped<ILoanRepository, LoanRepository>();
 builder.Services.AddScoped<IAuthRepository, AuthRepository>();
+builder.Services.AddScoped<IUserRepository, UserRepository>();
+builder.Services.AddScoped<IReportRepository, ReportRepository>();
+
 
 
 builder.Services.AddAutoMapper(typeof(LibrarySystemMapper));

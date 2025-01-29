@@ -9,35 +9,46 @@ import LoanList from '../features/loans/pages/LoanList';
 import LoanCreate from '../features/loans/pages/LoanCreate';
 import AdminReports from '../features/reports/pages/AdminReports';
 import { PrivateRoute } from './PrivateRoute';
-import HomePage from '../features/home/pages/HomePage'; // <-- Nuevo componente
+import PrivateLayout from '../features/layout/PrivateLayout';
+import UserList from '../features/users/pages/UserList';
+import UserEdit from '../features/users/pages/UserEdit';
+
+// O un HomePage si lo tienes
+const HomePage = () => <h2>Bienvenido a la Biblioteca</h2>;
 
 const AppRouter = () => {
   return (
     <BrowserRouter>
       <Routes>
-        {/* RUTAS PÚBLICAS */}
+        {/* Rutas públicas */}
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
 
-        {/* RUTAS PROTEGIDAS */}
+        {/* Rutas protegidas */}
         <Route path="/" element={<PrivateRoute />}>
-          {/* Index => Home con links */}
-          <Route index element={<HomePage />} />
+          <Route element={<PrivateLayout />}>
+            {/* Ruta / => HomePage */}
+            <Route index element={<HomePage />} />
 
-          {/* Libros */}
-          <Route path="books" element={<BookList />} />
-          <Route path="books/create" element={<BookCreate />} />
-          <Route path="books/edit/:id" element={<BookEdit />} />
+            {/* Libros */}
+            <Route path="books" element={<BookList />} />
+            <Route path="books/create" element={<BookCreate />} />
+            <Route path="books/edit/:id" element={<BookEdit />} />
 
-          {/* Préstamos */}
-          <Route path="loans" element={<LoanList />} />
-          <Route path="loans/create" element={<LoanCreate />} />
+            {/* Préstamos */}
+            <Route path="loans" element={<LoanList />} />
+            <Route path="loans/create" element={<LoanCreate />} />
 
-          {/* Reportes => Solo bibliotecario/admin (puedes poner otra PrivateRoute si quieres) */}
-          <Route path="reports" element={<AdminReports />} />
+            {/* Reportes */}
+            <Route path="reports" element={<AdminReports />} />
+
+            {/* Rutas de Usuarios */}
+            <Route path="users" element={<UserList />} />
+            <Route path="users/edit/:id" element={<UserEdit />} />
+          </Route>
         </Route>
 
-        {/* RUTA POR DEFECTO */}
+        {/* Ruta no encontrada */}
         <Route path="*" element={<h2>404 - Not Found</h2>} />
       </Routes>
     </BrowserRouter>

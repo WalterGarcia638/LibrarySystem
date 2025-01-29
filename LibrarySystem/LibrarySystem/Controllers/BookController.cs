@@ -56,7 +56,7 @@ namespace LibrarySystem.Controllers
         // Ejemplo de endpoint para filtrar por distintos campos.
         // Puedes separar endpoints si lo prefieres.
         [HttpGet("search")]
-        public IActionResult SearchBooks([FromQuery] string? title, [FromQuery] string? author, [FromQuery] string? genre)
+        public IActionResult SearchBooks([FromQuery] string? title, [FromQuery] string? author, [FromQuery] string? genre, string? isbn)
         {
             var books = _bookRepository.GetBooks(); // Obtiene todos los libros inicialmente
 
@@ -77,6 +77,12 @@ namespace LibrarySystem.Controllers
             {
                 books = books.Where(b => b.Genre.ToLower().Contains(genre.ToLower())).ToList();
             }
+
+            if (!string.IsNullOrEmpty(isbn))
+            {
+                books = books.Where(b => b.ISBN.ToLower().Contains(isbn.ToLower())).ToList();
+            }
+
 
             // Mapea los resultados a los DTOs
             var bookDTOs = _mapper.Map<ICollection<GetBookDTO>>(books);
