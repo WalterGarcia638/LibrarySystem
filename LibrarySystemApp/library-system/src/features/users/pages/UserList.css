@@ -1,0 +1,64 @@
+/* Contenedor principal */
+
+.user-list-container {
+  max-width: 80%;
+  margin: 2rem auto;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  background-color: #fff;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Título */
+
+.user-list-title {
+  text-align: center;
+  font-size: 1.8rem;
+  color: #333;
+}
+
+/* Tabla de usuarios */
+
+.user-list-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+}
+
+.user-list-table th,
+.user-list-table td {
+  padding: 10px;
+  border: 1px solid #ddd;
+  text-align: left;
+}
+
+.user-list-table th {
+  background-color: #f4f4f4;
+}
+
+/* Botones de acción */
+
+.user-list-edit {
+  color: #007bff;
+  text-decoration: none;
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+.user-list-edit:hover {
+  text-decoration: underline;
+}
+
+.user-list-delete {
+  background-color: #dc3545;
+  color: white;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.user-list-delete:hover {
+  background-color: #c82333;
+}

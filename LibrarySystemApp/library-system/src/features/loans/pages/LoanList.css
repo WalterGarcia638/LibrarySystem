@@ -1,0 +1,72 @@
+/* Contenedor principal */
+
+.loan-list-container {
+  max-width: 90%;
+  margin: 2rem auto;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  background-color: #fff;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Título */
+
+.loan-list-title {
+  text-align: center;
+  font-size: 1.8rem;
+  color: #333;
+}
+
+/* Botón agregar préstamo */
+
+.loan-add-button {
+  background-color: #28a745;
+  color: white;
+  padding: 0.6rem 1rem;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  cursor: pointer;
+  display: block;
+  margin: 1rem auto;
+  transition: background 0.3s ease;
+}
+
+.loan-add-button:hover {
+  background-color: #218838;
+}
+
+/* Tabla de préstamos */
+
+.loan-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+}
+
+.loan-table th,
+.loan-table td {
+  padding: 10px;
+  border: 1px solid #ddd;
+  text-align: left;
+}
+
+.loan-table th {
+  background-color: #f4f4f4;
+}
+
+/* Botón devolver */
+
+.loan-return-button {
+  background-color: #007bff;
+  color: white;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.loan-return-button:hover {
+  background-color: #0056b3;
+}

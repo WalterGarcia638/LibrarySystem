@@ -1,44 +1,8 @@
-/*import React, { useEffect, useState } from 'react';
-import { bookService } from '../bookService';
-import { Link } from 'react-router-dom';
-
-const BookList = () => {
-  const [books, setBooks] = useState([]);
-
-  const fetchBooks = async () => {
-    try {
-      const data = await bookService.getBooks();
-      setBooks(data);
-    } catch (err) {
-      console.error('Error fetching books', err);
-    }
-  };
-
-  useEffect(() => {
-    fetchBooks();
-  }, []);
-
-  return (
-    <div>
-      <h2>Catálogo de Libros</h2>
-      <Link to="/books/create">Agregar Nuevo Libro</Link>
-      <ul>
-        {books.map(book => (
-          <li key={book.id}>
-            {book.title} - {book.author} 
-            <Link to={`/books/edit/${book.id}`}>Editar</Link>
-          </li>
-        ))}
-      </ul>
-    </div>
-  );
-};
-
-export default BookList;*/
-
 import React, { useEffect, useState } from 'react';
 import { bookService } from '../bookService';
 import { useNavigate, Link } from 'react-router-dom';
+import Swal from 'sweetalert2';
+import './BookList.css';
 
 const BookList = () => {
   const [books, setBooks] = useState([]);
@@ -63,48 +27,61 @@ const BookList = () => {
   // Buscar libros
   const handleSearch = async () => {
     try {
-      // Creamos el query string según el tipo
-      let query = '';
-      if (searchType === 'title') {
-        query = `?title=${searchValue}`;
-      } else if (searchType === 'author') {
-        query = `?author=${searchValue}`;
-      } else if (searchType === 'isbn') {
-        query = `?isbn=${searchValue}`;
-      } else if (searchType === 'genre') {
-        query = `?genre=${searchValue}`;
-      }
-
+      let query = `?${searchType}=${searchValue}`;
       const results = await bookService.searchBooks(query);
       setBooks(results);
     } catch (err) {
-      alert('Error buscando libros');
+      Swal.fire({
+        icon: 'error',
+        title: 'Error en la búsqueda',
+        text: 'No se pudieron encontrar los libros.',
+      });
       console.error(err);
     }
   };
 
-  // Eliminar un libro
+  // Eliminar un libro con SweetAlert2
   const handleDelete = async (bookId) => {
-    if (!window.confirm('¿Seguro que deseas eliminar este libro?')) return;
-    try {
-      await bookService.deleteBook(bookId);
-      alert('Libro eliminado');
-      fetchBooks(); // recarga la lista
-    } catch (err) {
-      alert('Error al eliminar libro');
-    }
+    Swal.fire({
+      title: '¿Estás seguro?',
+      text: 'Esta acción eliminará el libro permanentemente.',
+      icon: 'warning',
+      showCancelButton: true,
+      confirmButtonColor: '#d9534f',
+      cancelButtonColor: '#6c757d',
+      confirmButtonText: 'Sí, eliminar',
+      cancelButtonText: 'Cancelar',
+    }).then(async (result) => {
+      if (result.isConfirmed) {
+        try {
+          await bookService.deleteBook(bookId);
+          Swal.fire({
+            icon: 'success',
+            title: 'Libro eliminado',
+            text: 'El libro ha sido eliminado exitosamente.',
+          });
+          fetchBooks(); // Recarga la lista
+        } catch (err) {
+          Swal.fire({
+            icon: 'error',
+            title: 'Error al eliminar',
+            text: 'Hubo un problema al eliminar el libro.',
+          });
+        }
+      }
+    });
   };
 
   return (
-    <div>
-      <h2>Catálogo de Libros</h2>
+    <div className="book-list-container">
+      <h2 className="book-list-title">Catálogo de Libros</h2>
 
       {/* Barra de Búsqueda */}
-      <div style={{ marginBottom: '1rem' }}>
+      <div className="book-search-container">
         <select
           value={searchType}
           onChange={(e) => setSearchType(e.target.value)}
-          style={{ marginRight: '8px' }}
+          className="book-search-select"
         >
           <option value="title">Título</option>
           <option value="author">Autor</option>
@@ -116,20 +93,23 @@ const BookList = () => {
           placeholder={`Buscar por ${searchType}`}
           value={searchValue}
           onChange={(e) => setSearchValue(e.target.value)}
-          style={{ marginRight: '8px' }}
+          className="book-search-input"
         />
-        <button onClick={handleSearch}>Buscar</button>
-      </div>
-
-      {/* Botón para crear un nuevo libro */}
-      <div style={{ marginBottom: '1rem' }}>
-        <button onClick={() => navigate('/books/create')}>
-          Agregar Nuevo Libro
+        <button onClick={handleSearch} className="book-search-button">
+          Buscar
         </button>
       </div>
 
+      {/* Botón para crear un nuevo libro */}
+      <button
+        onClick={() => navigate('/books/create')}
+        className="book-add-button"
+      >
+        Agregar Nuevo Libro
+      </button>
+
       {/* Tabla de Libros */}
-      <table border="1" cellPadding="5" style={{ borderCollapse: 'collapse' }}>
+      <table className="book-table">
         <thead>
           <tr>
             <th>ID</th>
@@ -143,25 +123,36 @@ const BookList = () => {
           </tr>
         </thead>
         <tbody>
-          {books.map((b) => (
-            <tr key={b.id}>
-              <td>{b.id}</td>
-              <td>{b.title}</td>
-              <td>{b.author}</td>
-              <td>{b.isbn}</td>
-              <td>{b.genre}</td>
-              <td>{b.year}</td>
-              <td>{b.quantity}</td>
-              <td>
-                {/* Editar -> /books/edit/:id */}
-                <Link to={`/books/edit/${b.id}`} style={{ marginRight: '8px' }}>
-                  Editar
-                </Link>
-                {/* Eliminar */}
-                <button onClick={() => handleDelete(b.id)}>Eliminar</button>
+          {books.length > 0 ? (
+            books.map((b) => (
+              <tr key={b.id}>
+                <td>{b.id}</td>
+                <td>{b.title}</td>
+                <td>{b.author}</td>
+                <td>{b.isbn}</td>
+                <td>{b.genre}</td>
+                <td>{b.year}</td>
+                <td>{b.quantity}</td>
+                <td className="book-action-buttons">
+                  <Link to={`/books/edit/${b.id}`} className="book-edit-link">
+                    Editar
+                  </Link>
+                  <button
+                    onClick={() => handleDelete(b.id)}
+                    className="book-delete-button"
+                  >
+                    Eliminar
+                  </button>
+                </td>
+              </tr>
+            ))
+          ) : (
+            <tr>
+              <td colSpan="8" style={{ textAlign: 'center', padding: '1rem' }}>
+                No hay libros disponibles.
               </td>
             </tr>
-          ))}
+          )}
         </tbody>
       </table>
     </div>

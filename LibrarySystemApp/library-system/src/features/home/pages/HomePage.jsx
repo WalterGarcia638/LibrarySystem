@@ -1,24 +1,26 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import './HomePage.css';
 
 const HomePage = () => {
   return (
-    <div>
-      <h1>Bienvenido a la Biblioteca</h1>
-      <nav>
-        {/* Enlaces a otras secciones */}
-        <ul>
-          <li>
-            <Link to="/books">Gestionar Libros</Link>
-          </li>
-          <li>
-            <Link to="/loans">Gestionar Préstamos</Link>
-          </li>
-          <li>
-            <Link to="/reports">Reportes (Solo Bibliotecario/Admin)</Link>
-          </li>
-        </ul>
-      </nav>
+    <div className="home-container">
+      <h1 className="home-title">Bienvenido a la Biblioteca</h1>
+      <p className="home-subtitle">
+        Gestiona libros, préstamos y usuarios de manera sencilla.
+      </p>
+
+      <div className="home-links">
+        <Link to="/books" className="home-button">
+          Ver Libros
+        </Link>
+        <Link to="/loans" className="home-button">
+          Ver Préstamos
+        </Link>
+        <Link to="/reports" className="home-button">
+          Reportes
+        </Link>
+      </div>
     </div>
   );
 };

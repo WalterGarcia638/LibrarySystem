@@ -1,0 +1,78 @@
+/* Contenedor principal */
+
+.loan-create-container {
+  max-width: 450px;
+  margin: 5% auto;
+  padding: 2rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  background-color: #fafafa;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Título */
+
+.loan-create-title {
+  text-align: center;
+  font-size: 1.8rem;
+  color: #333;
+}
+
+/* Formulario */
+
+.loan-create-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+/* Grupo de cada label + input */
+
+.loan-create-group {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Label */
+
+.loan-create-label {
+  margin-bottom: 0.25rem;
+  font-weight: bold;
+  color: #555;
+}
+
+/* Input y Select */
+
+.loan-create-input,
+.loan-create-select {
+  padding: 0.5rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  outline: none;
+}
+
+/* Input focus */
+
+.loan-create-input:focus,
+.loan-create-select:focus {
+  border-color: #4caf50;
+}
+
+/* Botón */
+
+.loan-create-button {
+  background-color: #4caf50;
+  color: white;
+  padding: 0.6rem 1rem;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.loan-create-button:hover {
+  background-color: #388e3c;
+}

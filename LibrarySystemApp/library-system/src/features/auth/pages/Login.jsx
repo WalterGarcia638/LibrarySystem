@@ -3,6 +3,7 @@ import { authService } from '../authService';
 import { useAuth } from '../../../hooks/useAuth';
 import { useNavigate } from 'react-router-dom';
 import './Login.css';
+import Swal from 'sweetalert2';
 
 const Login = () => {
   const [form, setForm] = useState({ username: '', password: '' });
@@ -17,45 +18,32 @@ const Login = () => {
     e.preventDefault();
     try {
       const { token } = await authService.login(form.username, form.password);
-      login(token); // Guarda token y setea user en el contexto
-      navigate('/'); // Redirige a la ruta principal (protegida)
+      login(token);
+
+      // Mensaje de éxito con SweetAlert2
+      Swal.fire({
+        icon: 'success',
+        title: '¡Bienvenido!',
+        text: 'Has iniciado sesión correctamente.',
+        showConfirmButton: false,
+        timer: 2000, // Redirige después de 2 segundos
+      });
+
+      // Espera un momento antes de redirigir
+      setTimeout(() => {
+        navigate('/'); // Redirige al home
+      }, 2000); // Redirige al home
     } catch (error) {
-      alert('Error de credenciales');
+      // En lugar de alert(), usamos SweetAlert2:
+      Swal.fire({
+        icon: 'error',
+        title: 'Error al Iniciar Sesión',
+        text: 'Credenciales inválidas o servidor no disponible.',
+        footer: '<a href="/register">¿No tienes cuenta? Regístrate aquí</a>',
+      });
     }
   };
 
-  /*return (
-    <div>
-      <h2>Iniciar Sesión</h2>
-      <form onSubmit={handleSubmit}>
-        <label>
-          Usuario:
-          <input
-            name="username"
-            value={form.username}
-            onChange={handleChange}
-          />
-        </label>
-        <br />
-        <label>
-          Contraseña:
-          <input
-            type="password"
-            name="password"
-            value={form.password}
-            onChange={handleChange}
-          />
-        </label>
-        <br />
-        <button type="submit">Ingresar</button>
-        {}
-        <button type="button" onClick={() => navigate('/register')}>
-          Registrarse
-        </button>
-      </form>
-    </div>
-  );
-};*/
   return (
     <div className="login-container">
       <h2 className="login-title">Iniciar Sesión</h2>

@@ -1,0 +1,51 @@
+/* Contenedor principal */
+
+.home-container {
+  max-width: 800px;
+  margin: 5% auto;
+  text-align: center;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  background-color: #fff;
+}
+
+/* Título principal */
+
+.home-title {
+  font-size: 2rem;
+  color: #007bff;
+}
+
+/* Subtítulo */
+
+.home-subtitle {
+  font-size: 1.2rem;
+  color: #555;
+  margin-bottom: 2rem;
+}
+
+/* Contenedor de botones */
+
+.home-links {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+/* Botones de navegación */
+
+.home-button {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  text-decoration: none;
+  color: white;
+  background-color: #007bff;
+  border-radius: 5px;
+  font-size: 1rem;
+  transition: background 0.3s ease;
+}
+
+.home-button:hover {
+  background-color: #0056b3;
+}

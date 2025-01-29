@@ -12,9 +12,7 @@ import { PrivateRoute } from './PrivateRoute';
 import PrivateLayout from '../features/layout/PrivateLayout';
 import UserList from '../features/users/pages/UserList';
 import UserEdit from '../features/users/pages/UserEdit';
-
-// O un HomePage si lo tienes
-const HomePage = () => <h2>Bienvenido a la Biblioteca</h2>;
+import HomePage from '../features/home/pages/HomePage'; // Importamos HomePage
 
 const AppRouter = () => {
   return (

@@ -1,21 +1,23 @@
 import React, { useEffect, useState } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { userService } from '../userService';
+import Swal from 'sweetalert2';
+import './UserEdit.css';
 
 const UserEdit = () => {
-  const { id } = useParams(); // /users/edit/:id
+  const { id } = useParams();
   const navigate = useNavigate();
 
   const [form, setForm] = useState({
     username: '',
     name: '',
-    password: '', // Campo para la contraseña
-    role: 'User', // Valor por defecto
+    password: '',
+    role: 'User',
   });
+
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState('');
 
-  // Cargar datos del usuario al montar
   useEffect(() => {
     const fetchUser = async () => {
       try {
@@ -23,7 +25,7 @@ const UserEdit = () => {
         setForm({
           username: data.username,
           name: data.name,
-          password: '', // Por defecto vacío (solo se llena si el usuario quiere cambiar)
+          password: '',
           role: data.role,
         });
         setLoading(false);
@@ -35,21 +37,28 @@ const UserEdit = () => {
     fetchUser();
   }, [id]);
 
-  // Manejo de cambios en el formulario
   const handleChange = (e) => {
     setForm({ ...form, [e.target.name]: e.target.value });
   };
 
-  // Guardar cambios
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      // Hacemos la llamada al servicio
       await userService.updateUser(id, form);
-      alert('Usuario actualizado correctamente');
-      navigate('/users'); // Vuelve a la lista de usuarios
+      Swal.fire({
+        icon: 'success',
+        title: '¡Usuario actualizado!',
+        text: 'Los cambios se han guardado correctamente.',
+        confirmButtonText: 'Aceptar',
+      }).then(() => {
+        navigate('/users');
+      });
     } catch (err) {
-      setError('Error al actualizar usuario');
+      Swal.fire({
+        icon: 'error',
+        title: 'Error',
+        text: 'No se pudo actualizar el usuario.',
+      });
     }
   };
 
@@ -57,42 +66,60 @@ const UserEdit = () => {
   if (error) return <p>{error}</p>;
 
   return (
-    <div>
-      <h2>Editar Usuario</h2>
-      <form onSubmit={handleSubmit}>
-        <div>
-          <label>Usuario: </label>
+    <div className="user-edit-container">
+      <h2 className="user-edit-title">Editar Usuario</h2>
+      <form onSubmit={handleSubmit} className="user-edit-form">
+        <div className="user-edit-group">
+          <label className="user-edit-label">Usuario:</label>
           <input
             name="username"
             value={form.username}
             onChange={handleChange}
+            className="user-edit-input"
           />
         </div>
-        <div>
-          <label>Nombre: </label>
-          <input name="name" value={form.name} onChange={handleChange} />
+
+        <div className="user-edit-group">
+          <label className="user-edit-label">Nombre:</label>
+          <input
+            name="name"
+            value={form.name}
+            onChange={handleChange}
+            className="user-edit-input"
+          />
         </div>
-        <div>
-          <label>Contraseña (opcional): </label>
+
+        <div className="user-edit-group">
+          <label className="user-edit-label">Contraseña (opcional):</label>
           <input
             type="password"
             name="password"
             value={form.password}
             onChange={handleChange}
+            className="user-edit-input"
           />
-          <p style={{ fontSize: '0.9rem', color: '#666' }}>
+          <p className="user-edit-hint">
             Deja este campo vacío si no deseas cambiar la contraseña
           </p>
         </div>
-        <div>
-          <label>Rol: </label>
-          <select name="role" value={form.role} onChange={handleChange}>
+
+        <div className="user-edit-group">
+          <label className="user-edit-label">Rol:</label>
+          <select
+            name="role"
+            value={form.role}
+            onChange={handleChange}
+            className="user-edit-select"
+          >
             <option value="User">Usuario</option>
             <option value="Librarian">Bibliotecario</option>
             <option value="Admin">Administrador</option>
           </select>
         </div>
-        <button type="submit">Guardar</button>
+
+        <button type="submit" className="user-edit-button">
+          Guardar Cambios
+        </button>
       </form>
     </div>
   );

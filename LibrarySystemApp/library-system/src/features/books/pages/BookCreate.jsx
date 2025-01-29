@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
+import Swal from 'sweetalert2';
 import BookForm from '../components/BookForm';
 import { bookService } from '../bookService';
-import { useNavigate } from 'react-router-dom';
 
 const BookCreate = () => {
   const [form, setForm] = useState({
@@ -22,15 +23,30 @@ const BookCreate = () => {
     e.preventDefault();
     try {
       await bookService.createBook(form);
-      navigate('/books');
+
+      // Mensaje de éxito con SweetAlert2
+      Swal.fire({
+        icon: 'success',
+        title: '¡Libro Agregado!',
+        text: 'El libro se ha registrado correctamente.',
+        confirmButtonText: 'Aceptar',
+      }).then(() => {
+        navigate('/books'); // Redirige a la lista de libros
+      });
     } catch (error) {
-      alert('Error creando libro');
+      // Mensaje de error con SweetAlert2
+      Swal.fire({
+        icon: 'error',
+        title: 'Error al Crear Libro',
+        text: 'Hubo un problema al registrar el libro. Inténtalo de nuevo.',
+        confirmButtonText: 'Aceptar',
+      });
     }
   };
 
   return (
-    <div>
-      <h2>Agregar Libro</h2>
+    <div className="book-create-container">
+      <h2 className="book-create-title">Agregar Libro</h2>
       <BookForm form={form} onChange={handleChange} onSubmit={handleSubmit} />
     </div>
   );

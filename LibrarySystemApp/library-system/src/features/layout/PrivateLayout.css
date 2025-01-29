@@ -1,0 +1,79 @@
+/* Barra de navegación */
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: #343a40;
+  color: white;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Contenedor de enlaces */
+
+.navbar-links {
+  display: flex;
+  gap: 15px;
+}
+
+/* Estilos de los enlaces */
+
+.navbar-links a {
+  color: white;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: color 0.3s;
+}
+
+.navbar-links a:hover {
+  color: #17a2b8;
+}
+
+/* Información del usuario */
+
+.navbar-user {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+/* Botón de cierre de sesión */
+
+.logout-button {
+  background-color: #dc3545;
+  border: none;
+  color: white;
+  padding: 8px 12px;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+}
+
+.logout-button:hover {
+  background-color: #c82333;
+}
+
+/* Contenedor principal */
+
+.main-content {
+  padding: 1rem;
+}
+
+/* Estilos para dispositivos móviles */
+
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .navbar-links {
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 10px;
+  }
+  .navbar-user {
+    margin-top: 10px;
+  }
+}
