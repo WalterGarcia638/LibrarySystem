@@ -8,6 +8,7 @@ D:\PruebaTecnica\LibrarySystem\LibrarySystem\LibrarySystem\bin\Debug\net8.0\Libr
 D:\PruebaTecnica\LibrarySystem\LibrarySystem\LibrarySystem\bin\Debug\net8.0\AutoMapper.dll
 D:\PruebaTecnica\LibrarySystem\LibrarySystem\LibrarySystem\bin\Debug\net8.0\Azure.Core.dll
 D:\PruebaTecnica\LibrarySystem\LibrarySystem\LibrarySystem\bin\Debug\net8.0\Azure.Identity.dll
+D:\PruebaTecnica\LibrarySystem\LibrarySystem\LibrarySystem\bin\Debug\net8.0\FluentAssertions.dll
 D:\PruebaTecnica\LibrarySystem\LibrarySystem\LibrarySystem\bin\Debug\net8.0\Humanizer.dll
 D:\PruebaTecnica\LibrarySystem\LibrarySystem\LibrarySystem\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
 D:\PruebaTecnica\LibrarySystem\LibrarySystem\LibrarySystem\bin\Debug\net8.0\Microsoft.Bcl.AsyncInterfaces.dll

@@ -1,12 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "qVWbuJYyqom0IZz5WBwYGwoY+Y8hfZZbSkXCGFLdgoHpmIh2Stvp2yH43idjCYf7o4JaoZtp69Xu4ozrGGMw+w==",
+  "dgSpecHash": "z2DZiSNbg6M/2GOHy05cbE2XQyYIQqE56cZxM5fBQ3oWW32Mbg409ioEiLGlnvzJeh2Rg+4syXM3H2vwKjBZpw==",
   "success": true,
   "projectFilePath": "D:\\PruebaTecnica\\LibrarySystem\\LibrarySystem\\LibrarySystem\\LibrarySystem.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Walter Garcia\\.nuget\\packages\\automapper\\13.0.1\\automapper.13.0.1.nupkg.sha512",
     "C:\\Users\\Walter Garcia\\.nuget\\packages\\azure.core\\1.38.0\\azure.core.1.38.0.nupkg.sha512",
     "C:\\Users\\Walter Garcia\\.nuget\\packages\\azure.identity\\1.11.4\\azure.identity.1.11.4.nupkg.sha512",
+    "C:\\Users\\Walter Garcia\\.nuget\\packages\\fluentassertions\\8.0.1\\fluentassertions.8.0.1.nupkg.sha512",
     "C:\\Users\\Walter Garcia\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
     "C:\\Users\\Walter Garcia\\.nuget\\packages\\microsoft.aspnetcore.authentication.jwtbearer\\8.0.8\\microsoft.aspnetcore.authentication.jwtbearer.8.0.8.nupkg.sha512",
     "C:\\Users\\Walter Garcia\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\7.0.0\\microsoft.bcl.asyncinterfaces.7.0.0.nupkg.sha512",
