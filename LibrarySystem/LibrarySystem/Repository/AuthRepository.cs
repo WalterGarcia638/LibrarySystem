@@ -31,7 +31,6 @@ namespace LibrarySystem.Repository
 
         public void CreateUser(Users user)
         {
-            // Puedes asignar un rol por defecto si no te lo envían
             if (string.IsNullOrWhiteSpace(user.Role))
             {
                 user.Role = "User";
@@ -40,9 +39,6 @@ namespace LibrarySystem.Repository
             _context.Users.Add(user);
         }
 
-        /// <summary>
-        /// Valida credenciales (retorna el usuario si coincide, null si no)
-        /// </summary>
         public Users ValidateUser(string username, string password)
         {
             var user = GetUserByUsername(username);
@@ -53,16 +49,12 @@ namespace LibrarySystem.Repository
             return user;
         }
 
-        /// <summary>
-        /// Genera el JWT agregando un claim con el rol
-        /// </summary>
         public string GenerateJwtToken(Users user)
         {
             var claims = new List<Claim>
             {
                 new Claim(JwtRegisteredClaimNames.Sub, user.Username),
                 new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString()),
-                // Guardamos el rol en un claim 'role'
                 new Claim(ClaimTypes.Role, user.Role ?? "User")
             };
 

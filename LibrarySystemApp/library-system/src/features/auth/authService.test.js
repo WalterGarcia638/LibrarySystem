@@ -1,24 +1,20 @@
-// src/features/auth/authService.test.js
-
 import axiosClient from '../../api/axiosClient';
 import MockAdapter from 'axios-mock-adapter';
 import { authService } from './authService';
 
-// Creamos el mock sobre la MISMA instancia que usa authService
 const mock = new MockAdapter(axiosClient);
 
 describe('authService', () => {
   afterEach(() => {
-    // Resetea el mock después de cada test
     mock.reset();
   });
 
   it('debería realizar el login correctamente', async () => {
-    // Arrange: simulamos la respuesta del backend
+    // Arrange
     const mockResponse = { token: 'fake-jwt-token' };
     mock.onPost('/auth/login').reply(200, mockResponse);
 
-    // Act: llamamos al servicio
+    // Act
     const result = await authService.login('username', 'password');
 
     // Assert
@@ -30,21 +26,21 @@ describe('authService', () => {
   });
 
   it('debería manejar errores en el login', async () => {
-    // Arrange: simulamos un error 401 del backend
+    // Arrange
     mock.onPost('/auth/login').reply(401, { message: 'Unauthorized' });
 
-    // Act & Assert: verificamos que el servicio lance un error
+    // Act & Assert
     await expect(
       authService.login('wrong-user', 'wrong-password')
     ).rejects.toThrow();
   });
 
   it('debería registrar un usuario correctamente', async () => {
-    // Arrange: simulamos la respuesta del backend
+    // Arrange
     const mockResponse = { message: 'User registered successfully' };
     mock.onPost('/auth/register').reply(201, mockResponse);
 
-    // Act: llamamos al servicio
+    // Act
     const result = await authService.register({
       username: 'newuser',
       password: 'password123',
@@ -59,10 +55,10 @@ describe('authService', () => {
   });
 
   it('debería manejar errores en el registro', async () => {
-    // Arrange: simulamos un error 400 del backend
+    // Arrange
     mock.onPost('/auth/register').reply(400, { message: 'Bad Request' });
 
-    // Act & Assert: verificamos que el servicio lance un error
+    // Act & Assert
     await expect(
       authService.register({ username: 'invalid', password: 'short' })
     ).rejects.toThrow();

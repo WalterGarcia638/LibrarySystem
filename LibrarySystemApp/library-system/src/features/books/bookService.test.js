@@ -1,14 +1,10 @@
-// src/features/book/bookService.test.js
-
 import axiosClient from '../../api/axiosClient';
 import MockAdapter from 'axios-mock-adapter';
 import { bookService } from './bookService';
 
-// Creamos el mock sobre LA MISMA instancia que usa el servicio
 const mock = new MockAdapter(axiosClient);
 
 describe('bookService', () => {
-  // Limpia el mock después de cada test
   afterEach(() => {
     mock.reset();
   });
@@ -18,13 +14,11 @@ describe('bookService', () => {
       { id: 1, title: 'Book 1' },
       { id: 2, title: 'Book 2' },
     ];
-    // Simulamos la respuesta del backend
+
     mock.onGet('/book').reply(200, mockResponse);
 
-    // Llamamos al servicio
     const result = await bookService.getBooks();
 
-    // Verificamos que el resultado sea el esperado
     expect(result).toEqual(mockResponse);
     expect(mock.history.get.length).toBe(1);
   });
@@ -50,7 +44,7 @@ describe('bookService', () => {
 
     expect(result).toEqual(mockResponse);
     expect(mock.history.post.length).toBe(1);
-    // Verifica el body enviado
+
     expect(JSON.parse(mock.history.post[0].data)).toEqual(newBook);
   });
 
@@ -79,8 +73,6 @@ describe('bookService', () => {
   });
 
   it('debería buscar libros (searchBooks)', async () => {
-    // Supongamos que `searchBooks()` construye la URL con un query:
-    // /book/search?title=React
     const queryString = '?title=React';
     const mockResponse = [
       { id: 1, title: 'React in Action' },

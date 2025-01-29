@@ -9,7 +9,6 @@ namespace LibrarySystem.Mapper
     {
         public LibrarySystemMapper() 
         {
-            // Mapeo de Book a GetBookDTO
             CreateMap<Book, GetBookDTO>();
             CreateMap<BookDTO, Book>();
 

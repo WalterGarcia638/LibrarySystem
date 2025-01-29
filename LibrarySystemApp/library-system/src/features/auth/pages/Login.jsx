@@ -20,21 +20,18 @@ const Login = () => {
       const { token } = await authService.login(form.username, form.password);
       login(token);
 
-      // Mensaje de éxito con SweetAlert2
       Swal.fire({
         icon: 'success',
         title: '¡Bienvenido!',
         text: 'Has iniciado sesión correctamente.',
         showConfirmButton: false,
-        timer: 2000, // Redirige después de 2 segundos
+        timer: 2000,
       });
 
-      // Espera un momento antes de redirigir
       setTimeout(() => {
-        navigate('/'); // Redirige al home
-      }, 2000); // Redirige al home
+        navigate('/');
+      }, 2000);
     } catch (error) {
-      // En lugar de alert(), usamos SweetAlert2:
       Swal.fire({
         icon: 'error',
         title: 'Error al Iniciar Sesión',

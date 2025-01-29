@@ -20,7 +20,6 @@ namespace LibrarySystem.Controllers
             _mapper = mapper;
         }
 
-        // GET: api/Book
         [HttpGet]
         public IActionResult GetBooks()
         {
@@ -30,7 +29,6 @@ namespace LibrarySystem.Controllers
             return Ok(bookDTOList);
         }
 
-        // GET: api/Book/5
         [HttpGet("{id:int}", Name = "GetBookById")]
         public IActionResult GetBookById(int id)
         {
@@ -41,7 +39,6 @@ namespace LibrarySystem.Controllers
             return Ok(bookDTO);
         }
 
-        // GET: api/Book/ISBN/xxxx
         [HttpGet("ISBN/{isbn}", Name = "GetBookByISBN")]
         public IActionResult GetBookByISBN(string isbn)
         {
@@ -52,27 +49,21 @@ namespace LibrarySystem.Controllers
             return Ok(bookDTO);
         }
 
-        // GET: api/Book/search?title=...&author=...
-        // Ejemplo de endpoint para filtrar por distintos campos.
-        // Puedes separar endpoints si lo prefieres.
         [HttpGet("search")]
         public IActionResult SearchBooks([FromQuery] string? title, [FromQuery] string? author, [FromQuery] string? genre, string? isbn)
         {
-            var books = _bookRepository.GetBooks(); // Obtiene todos los libros inicialmente
+            var books = _bookRepository.GetBooks();
 
-            // Filtra por título si se proporciona
             if (!string.IsNullOrEmpty(title))
             {
                 books = books.Where(b => b.Title.ToLower().Contains(title.ToLower())).ToList();
             }
 
-            // Filtra por autor si se proporciona
             if (!string.IsNullOrEmpty(author))
             {
                 books = books.Where(b => b.Author.ToLower().Contains(author.ToLower())).ToList();
             }
 
-            // Filtra por género si se proporciona
             if (!string.IsNullOrEmpty(genre))
             {
                 books = books.Where(b => b.Genre.ToLower().Contains(genre.ToLower())).ToList();
@@ -83,25 +74,20 @@ namespace LibrarySystem.Controllers
                 books = books.Where(b => b.ISBN.ToLower().Contains(isbn.ToLower())).ToList();
             }
 
-
-            // Mapea los resultados a los DTOs
             var bookDTOs = _mapper.Map<ICollection<GetBookDTO>>(books);
 
             return Ok(bookDTOs);
         }
 
-
-        // POST: api/Book
         [HttpPost]
         public IActionResult CreateBook([FromBody] BookDTO bookDTO)
         {
             if (bookDTO == null) return BadRequest(ModelState);
 
-            // Verificar si ya existe un libro con este ISBN
             if (_bookRepository.ExistsBook(bookDTO.ISBN))
             {
                 ModelState.AddModelError("", "El libro con este ISBN ya existe.");
-                return StatusCode(409, ModelState); // Conflict
+                return StatusCode(409, ModelState);
             }
 
             var book = _mapper.Map<Book>(bookDTO);
@@ -115,8 +101,6 @@ namespace LibrarySystem.Controllers
             return CreatedAtRoute("GetBookById", new { id = book.Id }, book);
         }
 
-        // PUT / PATCH: api/Book/5
-        // Usa el que prefieras: PUT o PATCH
         [HttpPut("{id:int}", Name = "UpdateBook")]
         public IActionResult UpdateBook(int id, [FromBody] BookDTO bookDTO)
         {
@@ -127,9 +111,6 @@ namespace LibrarySystem.Controllers
                 return NotFound();
 
             var book = _bookRepository.GetBook(id);
-            // O puedes mapear directo si quieres
-            //var book = _mapper.Map<Book>(bookDTO);
-            //book.Id = id;
 
             book.Title = bookDTO.Title;
             book.Author = bookDTO.Author;
@@ -147,7 +128,6 @@ namespace LibrarySystem.Controllers
             return NoContent();
         }
 
-        // DELETE: api/Book/5
         [HttpDelete("{id:int}", Name = "DeleteBook")]
         public IActionResult DeleteBook(int id)
         {

@@ -22,20 +22,16 @@ const Register = () => {
     try {
       await authService.register(form);
 
-      // SweetAlert2 - Mensaje de éxito
       Swal.fire({
         icon: 'success',
         title: '¡Registro Exitoso!',
         text: 'El usuario ha sido registrado correctamente.',
         confirmButtonText: 'Ir a Iniciar Sesión',
       }).then(() => {
-        navigate('/login'); // Redirige automáticamente al login después de cerrar la alerta
+        navigate('/login');
       });
-
-      // Limpiar formulario después de registrar
       setForm({ username: '', password: '', role: 'User', name: '' });
     } catch (error) {
-      // SweetAlert2 - Error en el registro
       Swal.fire({
         icon: 'error',
         title: 'Error al Registrar',
@@ -109,7 +105,7 @@ const Register = () => {
         </div>
       </form>
 
-      {/* Enlace para regresar al Login */}
+      {}
       <p className="register-login-link">
         ¿Ya tienes una cuenta?{' '}
         <span onClick={() => navigate('/login')}>Inicia sesión aquí</span>

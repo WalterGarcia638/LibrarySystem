@@ -25,7 +25,6 @@ const LoanList = () => {
     fetchLoans();
   }, []);
 
-  // Devolver libro con SweetAlert2
   const handleReturn = async (loanId) => {
     Swal.fire({
       title: '¿Confirmar devolución?',
@@ -57,7 +56,6 @@ const LoanList = () => {
     });
   };
 
-  // Crear un nuevo préstamo
   const handleCreateLoan = () => {
     navigate('/loans/create');
   };
@@ -66,7 +64,7 @@ const LoanList = () => {
     <div className="loan-list-container">
       <h2 className="loan-list-title">Préstamos Activos</h2>
 
-      {/* Botón para crear un nuevo préstamo */}
+      {}
       <button onClick={handleCreateLoan} className="loan-add-button">
         Agregar Préstamo
       </button>

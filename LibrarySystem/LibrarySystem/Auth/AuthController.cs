@@ -22,9 +22,6 @@ namespace LibrarySystem.Auth
             _authRepository = authRepository;
         }
 
-        /// <summary>
-        /// Inicia sesión, retorna un JWT si las credenciales son válidas
-        /// </summary>
         [HttpPost("login")]
         public IActionResult Login([FromBody] LoginRequest request)
         {
@@ -39,14 +36,10 @@ namespace LibrarySystem.Auth
                 return Unauthorized("Usuario o contraseña incorrectos.");
             }
 
-            // Generar el token
             var token = _authRepository.GenerateJwtToken(user);
             return Ok(new { token });
         }
 
-        /// <summary>
-        /// Registra un nuevo usuario
-        /// </summary>
         [HttpPost("register")]
         public IActionResult Register([FromBody] Users newUser)
         {
@@ -60,13 +53,11 @@ namespace LibrarySystem.Auth
                 return BadRequest(new { message = "El nombre de usuario y la contraseña son obligatorios." });
             }
 
-            // ¿Ya existe?
             if (_authRepository.UserExists(newUser.Username))
             {
                 return BadRequest(new { message = "El usuario ya existe." });
             }
 
-            // Crear usuario en la BD
             _authRepository.CreateUser(newUser);
 
             if (!_authRepository.Save())

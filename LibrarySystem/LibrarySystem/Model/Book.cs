@@ -23,8 +23,6 @@ namespace LibrarySystem.Model
         public string Genre { get; set; }
 
         public int Year { get; set; }
-
-        // Cantidad de ejemplares disponibles
         public int Quantity { get; set; }
         public int TotalCopies { get; set; }
         public int AvailableCopies { get; set; }

@@ -14,13 +14,11 @@ const LoanCreate = () => {
     returnDate: '',
   });
 
-  // Estados para cargar la lista de libros y usuarios
   const [books, setBooks] = useState([]);
   const [users, setUsers] = useState([]);
 
   const navigate = useNavigate();
 
-  // Cargar libros y usuarios cuando el componente se monte
   useEffect(() => {
     const fetchData = async () => {
       try {
@@ -40,12 +38,10 @@ const LoanCreate = () => {
     fetchData();
   }, []);
 
-  // Manejo de cambios en los inputs
   const handleChange = (e) => {
     setForm({ ...form, [e.target.name]: e.target.value });
   };
 
-  // Validar formulario
   const validateForm = () => {
     if (!form.bookId) {
       Swal.fire({
@@ -82,7 +78,6 @@ const LoanCreate = () => {
     return true;
   };
 
-  // Enviar formulario
   const handleSubmit = async (e) => {
     e.preventDefault();
 

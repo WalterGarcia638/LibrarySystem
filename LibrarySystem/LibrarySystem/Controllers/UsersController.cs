@@ -17,7 +17,6 @@ namespace LibrarySystem.Controllers
             _userRepo = userRepo;
         }
 
-        // GET: api/Users
         [HttpGet]
         public IActionResult GetUsers()
         {
@@ -25,7 +24,6 @@ namespace LibrarySystem.Controllers
             return Ok(users);
         }
 
-        // GET: api/Users/5
         [HttpGet("{id:int}")]
         public IActionResult GetUser(int id)
         {
@@ -37,7 +35,6 @@ namespace LibrarySystem.Controllers
             return Ok(user);
         }
 
-        // PUT: api/Users/5
         [HttpPut("{id:int}")]
         public IActionResult UpdateUser(int id, [FromBody] UpdateUserDTO updatedDto)
         {
@@ -48,11 +45,9 @@ namespace LibrarySystem.Controllers
             if (userFromDb == null)
                 return NotFound();
 
-            // Actualiza solo los campos enviados en el DTO
             userFromDb.Username = updatedDto.Username ?? userFromDb.Username;
             userFromDb.Name = updatedDto.Name ?? userFromDb.Name;
 
-            // Si no está vacío, actualiza la contraseña
             if (!string.IsNullOrWhiteSpace(updatedDto.Password))
             {
                 userFromDb.Password = updatedDto.Password;
@@ -85,7 +80,7 @@ namespace LibrarySystem.Controllers
                 return StatusCode(500, ModelState);
             }
 
-            return NoContent(); // 204 No Content si todo salió bien
+            return NoContent();
         }
     }
 }

@@ -33,25 +33,20 @@ namespace LibrarySystem.Repository
 
         public bool CreateLoan(Loan loan)
         {
-            // Verificar si el libro existe y está disponible
             var book = _db.Book.FirstOrDefault(b => b.Id == loan.BookId);
             if (book == null)
             {
-                // El libro no existe
                 return false;
             }
 
             if (book.AvailableCopies <= 0)
             {
-                // No hay copias disponibles para prestar
                 return false;
             }
 
-            // Reservar una copia
             book.AvailableCopies -= 1;
             _db.Book.Update(book);
 
-            // Registrar el préstamo
             _db.Loan.Add(loan);
 
             return Save();
@@ -75,7 +70,7 @@ namespace LibrarySystem.Repository
 
             if (daysLate > 0)
             {
-                return daysLate * 1.0; // Ejemplo: $1 por día de retraso
+                return daysLate * 1.0;
             }
 
             return 0;
@@ -87,30 +82,24 @@ namespace LibrarySystem.Repository
             if (loan == null)
                 return false;
 
-            // Verificar que no se haya devuelto antes
             if (loan.ActualReturnDate != null)
             {
-                // Ya se devolvió; no podemos registrarlo de nuevo
                 return false;
             }
 
-            // Fecha real de devolución = ahora
             loan.ActualReturnDate = DateTime.Now;
 
-            // Calcular multa si hay retraso
             if (loan.ActualReturnDate > loan.ReturnDate)
             {
                 loan.Fine = CalculateFine(loan.ReturnDate, loan.ActualReturnDate.Value, 5.0);
             }
 
-            // Devolver la copia al inventario
             if (loan.Book != null)
             {
                 loan.Book.AvailableCopies += 1;
                 _db.Book.Update(loan.Book);
             }
 
-            // Guardar cambios del préstamo
             _db.Loan.Update(loan);
 
             return Save();

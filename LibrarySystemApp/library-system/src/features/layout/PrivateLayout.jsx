@@ -22,7 +22,7 @@ const PrivateLayout = () => {
 
   return (
     <div>
-      {/* Barra de navegación */}
+      {}
       <header className="navbar">
         <nav className="navbar-links">
           <Link to="/">
@@ -58,7 +58,7 @@ const PrivateLayout = () => {
         </div>
       </header>
 
-      {/* Contenido principal */}
+      {}
       <main className="main-content">
         <Outlet />
       </main>

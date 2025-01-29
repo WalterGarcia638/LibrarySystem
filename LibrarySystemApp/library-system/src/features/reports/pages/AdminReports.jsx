@@ -10,11 +10,9 @@ const AdminReports = () => {
   const [loans, setLoans] = useState([]);
   const [usersWithFines, setUsersWithFines] = useState([]);
 
-  // Estados para la paginación
   const [currentPage, setCurrentPage] = useState(0);
-  const loansPerPage = 5; // Cantidad de préstamos por página
+  const loansPerPage = 5;
 
-  // Obtener préstamos por periodo
   const handleFetchLoans = async () => {
     if (!start || !end) {
       Swal.fire({
@@ -27,7 +25,7 @@ const AdminReports = () => {
     try {
       const data = await reportService.getLoansByPeriod(start, end);
       setLoans(data);
-      setCurrentPage(0); // Resetear a la primera página
+      setCurrentPage(0);
     } catch (err) {
       Swal.fire({
         icon: 'error',
@@ -36,8 +34,6 @@ const AdminReports = () => {
       });
     }
   };
-
-  // Obtener usuarios con multas pendientes
   const handleFetchPendingFines = async () => {
     try {
       const data = await reportService.getUsersWithPendingFines();
@@ -51,12 +47,10 @@ const AdminReports = () => {
     }
   };
 
-  // Manejador de cambio de página
   const handlePageClick = (selectedPage) => {
     setCurrentPage(selectedPage.selected);
   };
 
-  // Calcular qué préstamos mostrar en la página actual
   const offset = currentPage * loansPerPage;
   const currentLoans = loans.slice(offset, offset + loansPerPage);
   const pageCount = Math.ceil(loans.length / loansPerPage);
@@ -65,7 +59,7 @@ const AdminReports = () => {
     <div className="admin-reports-container">
       <h2 className="admin-reports-title">Reportes</h2>
 
-      {/* Reporte de préstamos por periodo */}
+      {}
       <section className="admin-reports-section">
         <h3>Préstamos por Periodo</h3>
         <div className="admin-reports-filters">
@@ -88,7 +82,7 @@ const AdminReports = () => {
           </button>
         </div>
 
-        {/* Tabla de préstamos con paginación */}
+        {}
         <table className="admin-reports-table">
           <thead>
             <tr>
@@ -131,7 +125,7 @@ const AdminReports = () => {
           </tbody>
         </table>
 
-        {/* Paginación */}
+        {}
         {loans.length > loansPerPage && (
           <ReactPaginate
             previousLabel={'← Anterior'}
@@ -147,7 +141,7 @@ const AdminReports = () => {
         )}
       </section>
 
-      {/* Reporte de usuarios con multas */}
+      {}
       <section className="admin-reports-section">
         <h3>Usuarios con Multas Pendientes</h3>
         <button
@@ -157,7 +151,7 @@ const AdminReports = () => {
           Ver Usuarios
         </button>
 
-        {/* Lista de usuarios con multas */}
+        {}
         <ul className="admin-reports-fines-list">
           {usersWithFines.length > 0 ? (
             usersWithFines.map((u) => (

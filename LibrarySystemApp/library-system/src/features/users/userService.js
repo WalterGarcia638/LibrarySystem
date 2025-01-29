@@ -10,12 +10,11 @@ export const userService = {
     return response.data;
   },
   updateUser: async (id, userData) => {
-    // PUT o PATCH según tu backend
     const response = await axiosClient.put(`/users/${id}`, userData);
     return response.data;
   },
   deleteUser: async (id) => {
     const response = await axiosClient.delete(`/users/${id}`);
-    return response.data; // o podría ser vacío si tu API retorna NoContent
+    return response.data;
   },
 };

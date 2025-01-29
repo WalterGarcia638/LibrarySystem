@@ -1,5 +1,3 @@
-/* Contenedor principal */
-
 .user-edit-container {
   max-width: 400px;
   margin: 5% auto;
@@ -11,15 +9,11 @@
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-/* Título */
-
 .user-edit-title {
   text-align: center;
   font-size: 1.8rem;
   color: #333;
 }
-
-/* Formulario */
 
 .user-edit-form {
   display: flex;
@@ -27,21 +21,15 @@
   gap: 1rem;
 }
 
-/* Grupo de cada label + input */
-
 .user-edit-group {
   display: flex;
   flex-direction: column;
 }
 
-/* Label */
-
 .user-edit-label {
   font-weight: bold;
   color: #555;
 }
-
-/* Input y Select */
 
 .user-edit-input,
 .user-edit-select {
@@ -52,21 +40,15 @@
   outline: none;
 }
 
-/* Input focus */
-
 .user-edit-input:focus,
 .user-edit-select:focus {
   border-color: #007bff;
 }
 
-/* Mensaje de contraseña */
-
 .user-edit-hint {
   font-size: 0.85rem;
   color: #666;
 }
-
-/* Botón */
 
 .user-edit-button {
   background-color: #007bff;

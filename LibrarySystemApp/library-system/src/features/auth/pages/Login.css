@@ -1,5 +1,3 @@
-/* Contenedor principal */
-
 .login-container {
   max-width: 400px;
   margin: 5% auto;
@@ -11,8 +9,6 @@
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-/* Título */
-
 .login-title {
   text-align: center;
   margin-bottom: 1rem;
@@ -20,15 +16,11 @@
   color: #333;
 }
 
-/* Formulario */
-
 .login-form {
   display: flex;
   flex-direction: column;
   gap: 0.75rem;
 }
-
-/* Grupo de cada label + input */
 
 .login-form-group {
   display: flex;
@@ -36,15 +28,11 @@
   margin-bottom: 0.5rem;
 }
 
-/* Label */
-
 .login-label {
   margin-bottom: 0.25rem;
   font-weight: bold;
   color: #555;
 }
-
-/* Input de texto */
 
 .login-input {
   padding: 0.5rem;
@@ -54,20 +42,14 @@
   outline: none;
 }
 
-/* Input focus */
-
 .login-input:focus {
   border-color: #4caf50;
 }
-
-/* Contenedor de botones */
 
 .login-button-container {
   margin-top: 1rem;
   text-align: center;
 }
-
-/* Botón base */
 
 .login-button {
   padding: 0.6rem 1rem;
@@ -80,19 +62,13 @@
   transition: background-color 0.2s ease;
 }
 
-/* Botón para "Ingresar" (verde) */
-
 .login-button--login {
   background-color: #4caf50;
 }
 
-/* Botón para "Registrarse" (azul) */
-
 .login-button--register {
   background-color: #008cba;
 }
-
-/* Hover states */
 
 .login-button:hover {
   filter: brightness(90%);

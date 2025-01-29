@@ -6,11 +6,7 @@ namespace LibrarySystem.Repository.IRepository
     {
         ICollection<Book> GetBooks();
         Book GetBook(int id);
-
-        // Búsqueda por ISBN (ejemplo)
         Book GetBookByISBN(string isbn);
-
-        // Otras búsquedas según título, autor, género (opcional)
         ICollection<Book> GetBooksByTitle(string title);
         ICollection<Book> GetBooksByAuthor(string author);
         ICollection<Book> GetBooksByGenre(string genre);

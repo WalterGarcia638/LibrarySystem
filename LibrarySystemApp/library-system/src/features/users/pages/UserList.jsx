@@ -7,7 +7,6 @@ import './UserList.css';
 const UserList = () => {
   const [users, setUsers] = useState([]);
 
-  // Cargar usuarios
   const fetchUsers = async () => {
     try {
       const data = await userService.getUsers();
@@ -25,7 +24,6 @@ const UserList = () => {
     fetchUsers();
   }, []);
 
-  // Confirmar y eliminar usuario
   const handleDelete = async (userId) => {
     Swal.fire({
       title: '¿Estás seguro?',

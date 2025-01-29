@@ -54,11 +54,9 @@ namespace LibrarySystem.Controllers
 
             if (!created)
             {
-                // Puede que no exista el libro o no haya copias disponibles
                 return BadRequest(new { message = "No se pudo crear el préstamo (libro no existe o sin copias)." });
             }
 
-            // Si todo sale bien
             return Ok(new { message = "Préstamo creado con éxito.", loanId = loan.Id });
         }
 

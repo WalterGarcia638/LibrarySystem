@@ -15,9 +15,6 @@ namespace LibrarySystem.Controllers
             _reportRepo = reportRepo;
         }
 
-        /// <summary>
-        /// GET: /api/Reports/Loans?start=2023-01-01&end=2023-12-31
-        /// </summary>
         [HttpGet("loans")]
         public IActionResult GetLoansByPeriod([FromQuery] DateTime start, [FromQuery] DateTime end)
         {
@@ -30,10 +27,6 @@ namespace LibrarySystem.Controllers
             return Ok(loans);
         }
 
-        /// <summary>
-        /// GET: /api/Reports/pending-fines
-        /// Retorna usuarios con multas pendientes
-        /// </summary>
         [HttpGet("pending-fines")]
         public IActionResult GetUsersWithPendingFines()
         {

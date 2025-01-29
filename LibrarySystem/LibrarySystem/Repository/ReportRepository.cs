@@ -26,11 +26,6 @@ namespace LibrarySystem.Repository
 
         public ICollection<Users> GetUsersWithPendingFines()
         {
-            // Un usuario tiene multa pendiente si al menos uno de sus préstamos
-            // tiene Fine > 0 y no ha sido pagada (ej.: Fine se almacena en Loan).
-            // Deberías tener un campo que indique si la multa está pagada o no (depende de tu modelo).
-            // Aquí asumo Fine > 0 implica "pendiente".
-
             var userIds = _db.Loan
                 .Where(l => l.Fine > 0)
                 .Select(l => l.UserId)

@@ -1,5 +1,3 @@
-/* Contenedor principal */
-
 .loan-create-container {
   max-width: 450px;
   margin: 5% auto;
@@ -11,15 +9,11 @@
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-/* Título */
-
 .loan-create-title {
   text-align: center;
   font-size: 1.8rem;
   color: #333;
 }
-
-/* Formulario */
 
 .loan-create-form {
   display: flex;
@@ -27,22 +21,16 @@
   gap: 1rem;
 }
 
-/* Grupo de cada label + input */
-
 .loan-create-group {
   display: flex;
   flex-direction: column;
 }
-
-/* Label */
 
 .loan-create-label {
   margin-bottom: 0.25rem;
   font-weight: bold;
   color: #555;
 }
-
-/* Input y Select */
 
 .loan-create-input,
 .loan-create-select {
@@ -53,14 +41,10 @@
   outline: none;
 }
 
-/* Input focus */
-
 .loan-create-input:focus,
 .loan-create-select:focus {
   border-color: #4caf50;
 }
-
-/* Botón */
 
 .loan-create-button {
   background-color: #4caf50;
