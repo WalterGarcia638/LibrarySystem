@@ -9,7 +9,7 @@ Este proyecto es un sistema de gestión de biblioteca desarrollado con **.NET Co
 Asegúrate de tener instalado lo siguiente en tu sistema:
 
 ### **Backend** (API en .NET Core 6)
-- **.NET 6 SDK** → [Descargar aquí](https://dotnet.microsoft.com/en-us/download/dotnet/6.0)
+- **.NET 8 SDK** → [Descargar aquí](https://dotnet.microsoft.com/en-us/download/dotnet/6.0)
 - **SQL Server** o **MariaDB/MySQL** para la base de datos
 - **Entity Framework Core CLI**
 
@@ -123,7 +123,7 @@ npm test -- src/features/auth/authService.test.js
 ## 🛠 Tecnologías Usadas
 
 ### **Backend**
-- **.NET Core 6**
+- **.NET Core 8**
 - **Entity Framework Core 6**
 - **MySQL/MariaDB o SQL Server**
 - **AutoMapper**
