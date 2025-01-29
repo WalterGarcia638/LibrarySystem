@@ -1,6 +1,6 @@
 # 📚 Library System - Prueba Técnica
 
-Este proyecto es un sistema de gestión de biblioteca desarrollado con **.NET Core 6** en el backend y **ReactJS** en el frontend.
+Este proyecto es un sistema de gestión de biblioteca desarrollado con **.NET Core 8** en el backend y **ReactJS** en el frontend.
 
 ---
 
@@ -10,7 +10,7 @@ Este proyecto es un sistema de gestión de biblioteca desarrollado con **.NET Co
 
 Asegúrate de tener instalado lo siguiente en tu sistema:
 
-### **Backend** (API en .NET Core 6)
+### **Backend** (API en .NET Core 8)
 - **.NET 8 SDK** → [Descargar aquí](https://dotnet.microsoft.com/en-us/download/dotnet/6.0)
 - **SQL Server** o **MariaDB/MySQL** para la base de datos
 - **Entity Framework Core CLI**
@@ -93,6 +93,50 @@ El frontend se ejecutará en: [http://localhost:3000](http://localhost:3000)
 
 ---
 
+## ✅ Desplegar en Netlify
+
+Puedes desplegar el frontend en Netlify de manera rápida siguiendo estos pasos:
+
+### **1️⃣ Instalar Netlify CLI**
+Si no lo tienes instalado, ejecuta:
+```bash
+npm install -g netlify-cli
+```
+
+### **2️⃣ Construir la Aplicación**
+Antes de subir la aplicación, compila el proyecto para producción:
+```bash
+npm run build
+```
+Esto generará una carpeta `build/` con los archivos estáticos necesarios.
+
+### **3️⃣ Iniciar Sesión en Netlify CLI**
+```bash
+netlify login
+```
+
+### **4️⃣ Desplegar en Netlify**
+Ejecuta este comando en la raíz del proyecto:
+```bash
+netlify deploy --prod --dir=build
+```
+Si es la primera vez, Netlify te pedirá que crees un nuevo sitio.
+
+### **5️⃣ Configurar Variables de Entorno en Netlify**
+Si usas variables como `REACT_APP_API_URL`, agrégalas en **Netlify Dashboard**:
+1. Ve a **Netlify > Site Settings > Environment Variables**.
+2. Agrega cada variable con su valor (Ejemplo: `REACT_APP_API_URL = https://tu-api.com`).
+3. Guarda y vuelve a hacer deploy.
+
+### **6️⃣ Obtener la URL de Producción**
+Una vez desplegado, Netlify te dará una URL como:
+```
+https://tu-sitio.netlify.app
+```
+Puedes personalizarla desde **Site Settings > Domain Management**.
+
+---
+
 ## 👤 Creación de Usuario con Roles
 Para acceder a la administración de **usuarios y reportes**, debes crear un usuario con un rol diferente a "User":
 
@@ -125,8 +169,8 @@ npm test -- src/features/auth/authService.test.js
 ## 🛠 Tecnologías Usadas
 
 ### **Backend**
-- **.NET Core 8**
-- **Entity Framework Core 6**
+- **.NET Core 9**
+- **Entity Framework Core 8**
 - **MySQL/MariaDB o SQL Server**
 - **AutoMapper**
 - **JWT Authentication**
@@ -137,13 +181,6 @@ npm test -- src/features/auth/authService.test.js
 - **Axios**
 - **Bootstrap o Material-UI**
 - **Jest & React Testing Library**
-
----
-
-## 🌎 Despliegue
-Puedes desplegar la aplicación en plataformas como:
-- **Backend**: Azure, AWS, Railway, Heroku
-- **Frontend**: Vercel, Netlify
 
 ---
 
